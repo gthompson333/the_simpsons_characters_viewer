@@ -10,8 +10,14 @@ class TheSimpsonsCharactersViewerApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
         title: 'The Simpsons Characters Viewer',
-        home: CharactersListScreen());
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.amber),
+        ),
+        home: launchCharacterViewer(
+            charactersPath: '?q=simpsons+characters&format=json',
+            useMockData: true));
   }
 }
