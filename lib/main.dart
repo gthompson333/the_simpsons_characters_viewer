@@ -18,6 +18,6 @@ class TheSimpsonsCharactersViewerApp extends StatelessWidget {
         ),
         home: launchCharacterViewer(
             charactersPath: '?q=simpsons+characters&format=json',
-            useMockData: true));
+            useMockData: false));
   }
 }
